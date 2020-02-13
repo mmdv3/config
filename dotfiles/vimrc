@@ -1,0 +1,23 @@
+"set statusline=%y
+""" general """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set term=rxvt-unicode-256color
+set encoding=utf-8 "changes output encoding shown in the terminal
+set fileencoding=utf-8 
+set t_Co=256 "number of colors in terminal
+set nocompatible "turn off vi compatibility
+syntax on "syntax highlighting
+filetype plugin indent on "indenting source code
+autocmd BufNewFile,BufRead *.ui set filetype=userinfo "temporary solution
+set hlsearch "search pattern highlighting
+set incsearch "highlighting matches for current pattern
+""" current line """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set relativenumber		"line numbers
+set nocursorline		    "underline current line
+""" colors """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+color elflord               "color theme
+set cc=80                   "color column at line 80
+hi ColorColumn ctermbg=8    "grey color column
+""" tabs """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set shiftwidth=2            "number of spaces used for (auto)indent step
+set tabstop=4               "number of spaces that <TAB> counts for
+"set expandtab               "always insert spaces

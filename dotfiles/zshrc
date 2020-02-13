@@ -1,0 +1,119 @@
+source ~/zshlocal #  *_path, *_paths
+YELLOW='\033[1;33m' #  user color
+RED='\033[0;31m' #  root color
+NC='\033[0m' #  no color
+### try #####################################
+#  try to avoid 'zsh: no matches found...'
+setopt nonomatch
+#  alert me if something failed
+setopt printexitvalue
+#  use default width of 80 for manpages
+# export MANWIDTH=${MANWIDTH:-80}
+#############################################
+#zstyle :compinstall filename '/home/archie/.zshrc'
+ZSH_DISABLE_COMPFIX=false
+
+autoload -Uz compinit
+compinit
+### keybindings #############################
+bindkey "${terminfo[khome]}" beginning-of-line
+bindkey "${terminfo[kend]}" end-of-line
+### VI mode #################################
+bindkey -v
+# after hitting ESC in terminal to 0.1sec
+export KEYTIMEOUT=1
+#  backspace is bugged
+bindkey "^?" backward-delete-char
+### history #################################
+# HISTFILE - file for storing shell history
+#	HISTSIZE - number of lines stored in history
+#	HISTFILESIZE - number of lines stored in history file
+#	SAVEHIST - maximum number of history events to save in history file
+#	appendhistory - append new history lines instead of overwiriting
+HISTFILE=~/.zsh_histfile 	
+HISTSIZE=1000	
+HISTFILESIZE=1000
+SAVEHIST=1000
+setopt appendhistory
+### autocompletion ##########################
+# autocd - change directory given just path
+# extendglob
+setopt  autocd extendedglob
+# if there are no case sensitive matches ( '' provides the condition)
+# use case insensitive matching
+zstyle ':completion:*' matcher-list '' 'm:{a-zA-z}={A-Za-z}'
+# . directories used in completion
+#zstyle ':completion:*' special-dirs true
+# history search
+bindkey "^u" history-beginning-search-backward
+bindkey "^h" history-beginning-search-forward
+bindkey -a "^u" history-search-backward #  vi mode keybindings
+bindkey -a "^h" history-search-forward
+### prompt ##################################
+# leftside prompt
+PS1="%F{yellow}家%f"
+# rightside prompt
+RPS1=%F{yellow}%3~%f
+#  zle-keymap-select functions runs every time keymap changes
+#  except when you hit <RETURN>, when zle-line-init is run
+zle-line-init zle-keymap-select () #don't separete them with '\n'
+{
+#  red = regular mode	
+#  light blue = vi mode
+	if [[ "$TERM" == 'rxvt-unicode-256color' ]]
+	then
+		case $KEYMAP in	
+			vicmd|viins)
+				echo -ne "\033]12;#00bbff\007" ;;
+			main)  
+				echo -ne "\033]12;#ff0000\007" ;;
+		esac
+	else
+		return
+	fi
+}
+zle -N zle-keymap-select	#use zle-keymap-select
+zle -N zle-line-init 			#use zle-line-init
+### paths ###################################
+# 'other'
+# export OTHER_PATH=/home/archie/Other # do it in your .zshlocal
+# my scripts
+export PATH=$exec_paths:$PATH
+### aliases #################################
+alias view='vim -R'
+alias ls='ls --color=auto'
+alias la='ls -al'
+alias ll='ls -l'
+alias lc='ls -C'
+alias aj='add-to-journal'
+alias dj='dis-journal'
+alias ts='touchs'
+alias mg='contest-compile'
+alias mge='remove-executables; contest-compile'
+alias ec='remove-executables'
+alias me='urxvt -fade 50 &'
+alias cs='cp /home/archie/Notes/Contest/template-contest.cpp'
+alias bat='cat /sys/class/power_supply/BAT*/capacity'
+alias dis-info='cat $other_path/useful-info.ui'
+alias new-info='vim $other_path/useful-info.ui'
+alias les-info='less $other_path/useful-info.ui'
+alias dis-journal='cat $other_path/user-journal.ui'
+alias new-journal='vim $other_path/user-journal.ui'
+alias les-journal='less $other_path/useful-info.ui'
+alias dis-examples='cat $other_path/shell-examples.ui'
+alias new-examples='vim $other_path/shell-examples.ui'
+alias les-examples='less $other_path/shell-examples.ui'
+#############################################
+if [[ $(tty) =~ '/dev/tty1' ]]
+then startx
+fi
+#############################################
+if [[ -f ~/reminder ]]
+then cat ~/reminder ; rm ~/reminder
+fi
+#############################################
+function chpwd() {ls -C} #  run every time pwd changes
+#############################################
+export JUPYTERLAB_DIR=$HOME/.local/share/jupyter/lab
+
+

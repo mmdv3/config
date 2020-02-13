@@ -1,0 +1,102 @@
+! number of colors in terminal
+! #
+   URxvt*termName:	  rxvt-unicode-256color
+! perl extensions
+!  eval - {copy from,paste to} clipboard
+!  tabbed - tabs | tabs were awkward, they re disabled
+!  matcher - clickable urls in terminal (works ?)
+!  keyboard-select - copy/paste keyboard mode
+!  clipboard
+!  resize-font - #
+   URxvt.perl-ext-common: resize-font,matcher,eval,keyboard-select,clipboard
+!	general
+   URxvt.title: 		  Urxvt
+   URxvt.background:	black
+   URxvt.foreground:	white
+   URxvt.meta8:		  true
+!	scrollbar
+   URxvt.scrollBar:	false
+! cursor
+   URxvt.cursorColor: red
+! font
+!   URxvt.font:		    xft:DejaVu Sans Mono:pixelsize=12
+   URxvt.font:		xft:IPAMincho:pixelsize=15
+!   URxvt.letterSpace:	-1
+   URxvt.skipBuiltinGlyphs: false
+! number of lines saved by scrollback buffer
+   URxvt.saveLines:  1000
+! number of lines to insert between each row
+! of the Display 
+   URxvt.lineSpace: 0
+! pointer goes blank
+   URxvt.pointerBlank:	true
+! delay in seconds
+   URxvt.pointerBlankDelay: 1
+! can increase performance
+   URxvt.buffered:		true
+! copy to clipboard in keyboard-select mode
+   URxvt.keyboard-select.clipboard: true
+! set the key to be interpreted as the meta key
+!	 no idea how it works
+!  Urxvt.modifier: super
+! should produce borderless window, all hell goes crazy if its set
+! URxvt.borderLess: true
+!
+! Urxvt.intensityStyles: false
+! colors
+!  default	terminal colors
+!   colors/dark colors
+!    URxvt.color0:		black
+!    URxvt.color1:		dark red
+!    URxvt.color2:		green
+!    URxvt.color3:		dark yellow
+!    URxvt.color4:		dark blue
+!    URxvt.color5:	  dark magenta   	
+!    URxvt.color6:	  dark cyan
+!    URxvt.color7:	  light grey
+!   bright counterparts	
+!    URxvt.color8:	  dark grey
+!    URxvt.color9:	  red
+!    URxvt.color10:	  green	
+!    URxvt.color11:	  yellow
+!    URxvt.color12:	  blue
+!    URxvt.color13:	  magenta
+!    URxvt.color14:	  cyan	
+!    URxvt.color15:	  white	
+! my setup (alternative way to set up colors)
+!  blue
+!   *color4: 
+     *color12: #00bbff
+!  terminal tabs - colors
+!   main background
+     URxvt.tabbed.tabbar-bg: background
+!   separators
+     URxvt.tabbed.tabbar-fg: 15
+! active tab bg
+   URxvt.tabbed.tab-bg: 	background
+! active tab color
+  URxvt.tabbed.tab-fg: 	12
+!!!!!!! keys !!!!!!!!!!
+! enable keyboard selection
+   URxvt.keysym.M-Escape:  perl:keyboard-select:activate
+! ##
+   URxvt.keysym.M-Control-v: eval:paste_clipboard
+   URxvt.keysym.M-Control-c: eval:selection_to_clipboard
+! resize
+!   URxvt.keysym.C-Down:  resize-font:smaller
+!   URxvt.keysym.C-Up:  resize-font:bigger
+   URxvt.iso12755: false
+   URxvt.iso14755_52: false
+!
+!	 URxvt.keysym.0x61: b
+!!   URxvt.keysym.0xffb4: a
+
+!URxvt.keysym.M-0x000c: Y
+!URXvt.keysym.M-0x000d: Z
+!bullshit
+!URxvt.keysym.M:c
+!URxvt.keysym.Alt_L-a: b
+
+!symbols (echo -e)
+!\00d3
+

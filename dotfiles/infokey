@@ -1,0 +1,12 @@
+#info
+g	first-node
+G	last-node
+j	next-line
+k	prev-line
+
+n	search-next
+N	search-previous
+^c	abort-key
+
+:q	quit
+ZZ	quit

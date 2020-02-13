@@ -1,0 +1,18 @@
+#  set keymap
+setxkbmap pl
+#  load Xresources 
+xrdb -merge ~/.Xresources
+xrdb -merge ~/xlocal
+#  japanese input
+export GTK_IM_MODULE='fcitx'
+export QT_IM_MODULE='fcitx'
+uim-xim &
+export XMODIFIERS='@im=fcitx'
+#  default
+exec fcitx &
+exec xbanish &
+#exec window manager 
+simple_status_monitor.sh &
+exec dwm
+
+

@@ -1,4 +1,2 @@
-export other_path="path to 'other' repository"
-export notes_path="--||--"
 export config_path="--||--"
 export exec_paths="executables"

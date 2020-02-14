@@ -31,8 +31,6 @@ xorg 				#regular:
 xorg-xinit			#regular:
 xorg-server			#regular:
 dmenu				#regular:
-i3-gaps				#regular: floating window manager
-i3status			#regular: topbar
 rxvt-unicode		#regular: terminal
 urxvt-perls 		#regular: perl add-ons for terminal
 qutebrowser			#regular: browser
@@ -57,8 +55,6 @@ xdotool				#regular: topbar dependency
 ntp					#regular: date/time
 urxvt-resize-font-git	#AUR:
 xbanish				#fork:
-any					#repo:
 config				#repo:
-other				#repo:
-arch-install		#repo:
+dwm					#repo:
 

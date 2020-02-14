@@ -1,0 +1,18 @@
+Description="eduroam"
+Connection='wireless'
+ExcludeAuto='yes'
+Interface=wlo1
+Security='wpa-configsection'
+ESSID='eduroam'
+IP='dhcp'
+TimeoutWPA=30
+WPAConfigSection=(
+	'ssid="eduroam"'
+	'key_mgmt=WPA-EAP'
+	'eap=TTLS'
+	'proto=WPA2'
+	'phase2="auth=MSCHAPV2"'
+	'anonymous_identity="anonymous@uwr.edu.pl"'
+	'identity="309249@uwr.edu.pl"'
+	'password="xxxxxxxxxxxxx"'
+)

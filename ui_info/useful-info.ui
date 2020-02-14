@@ -1,0 +1,118 @@
+vim: set tabstop=2
+
+|keymaps
+  /usr/share/kbd/keymaps - location
+	/usr/share/kbd/consolefonts - directory with tty fonts, *.psfu{.gz} have builtin unicode translation map
+  loadkeys
+  xev
+  /etc/inputrc #???
+|unicode chars
+  echo -e '\u<code>'
+   ex. echo -e '\u00d3' 
+|netctl
+  netctl profiles are stored here:
+   /etc/netctl
+|host id
+  /etc/hostname
+|grub setup
+  /etc/default/grub
+|zsh config
+  directory: /etc/zsh/zshrc
+  symbolic links:
+   (archie) /home/archie/.zshrc
+   (root)   /root/.zshrc
+  reload zshrc: source ~/.zshrc 
+|Xorg
+  ~/.xinitrc is actually proper place to store startx setup
+  ~/.Xdefaults
+  (archie) home/archie/.Xdefaults Urxvt config placed here actually works#
+  load xresource file: #doesnt work with colors
+   replace current settings:
+    xrdb <path_to_file>
+   merge with current setting
+    xrdb -merge <path_to_file>
+|i3 config
+  /etc/i3/config
+  /etc/i3status.conf
+  symbolic links:
+   (root)	  /root/.config/i3/config
+   (root)   /root/.config/i3status/config
+   (archie) /home/archie/.config/i3/config
+   (archie) /home/archie/.config/i3status/config
+|language
+  /etc/locale.conf - most important language variables
+  see locale(7) for info
+  locale-gen - run after any change in /etc/locale.gen
+  sudo locale - display current values of language variables
+|visudo - use it to edit /etc/sudoers, this comand checks 
+					for file syntax error after you save the file
+ ########################### random shit #################################
+|displays soundcards:
+ cat /proc/asound/cards
+|chvt x # switch to tty x
+ #xdotool find --onlyvisible --name <eg. firefox>
+ #xdotool windowsize <id> <width> <height>
+ #xdotool windowmove <id> <width> <height>
+|sudo netctl start {eduroam2,vectra-wifi}
+|startx
+|i3
+|systemctl
+|journalctl -xe
+|ln -make a link
+|pwd -display current directory
+|ls -l -display useful shit
+|racket package installation:
+  raco pkg install <package name>
+|diff - display differences between files
+|find
+  find <dir> -name <path> -print
+|head, tail
+|sort
+|chsh, passwd
+|man -k <keyword>
+  produces less random shit than 'apropos <keyword>'
+|tr
+|ps
+  list processes
+|kill
+|xrandr
+|jobs
+|^L
+  redraw screen
+|chmod, chown
+  chomod {u,g,o,a}+{r,w,x} <file>
+    works resursively
+|groups
+  see in what groups you are in
+|xrandr
+xrandr --output HDMI-0 --same-as LVDS --auto          
+xrandr --output HDMI-0 --same-as LVDS --mode 1920x1080
+xrandr --output HDMI-0 --auto                         
+xrandr --output HDMI-0 --left-of LVDS --auto          
+|lspci - list all PCI devices
+|umask - set predefined set of permissions to any new file you create
+|gzip - GNU Zip
+	gzip file - creates archive 
+|gunzip - uncompress archive
+	gunzip file.gz
+|tar - create an archive of multiple files
+	tar vcf archive.tar file1 file2 ...
+	tar vxf <archive.tar,archive.tar.xz> - unpack a .tar file
+	tar pxf archive.tar - unpack a .tar file, override your umask and 
+					preserve original permissions of files 
+	tar tf archive.tar - table of contents info
+		v - verbose
+|zcat - the same as gunzip -dc
+|du -ch <folder,files,...> - see size of files
+|whatis
+|dd
+	dd if=/dev/zero of=new_file bs=1024 count=1
+|udevadm
+	udevadm info --query=all --name=/dev/sda  'show path and other attributes				of a device
+|dmesg 'prints the last few kernel messages
+|wget
+	wget -r --no-parent -A 'Genki*' \
+		https://projects.ncsu.edu/project/japaneseonline/JpOnline.htm
+|rfkill - check if wireless card is not blocked / enable it
+|fontconfig - documented in fonts-conf(5)
+|pacman -Qdtq - find all packages that do not depend on other packages

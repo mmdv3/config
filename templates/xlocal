@@ -1,0 +1,3 @@
+   URxvt.font:	xft:Liberation Mono:pixelsize=12:autohint=true:antialias=true,\
+		xft:IPAMincho:pixelsize=15
+   URxvt.letterSpace:	-0

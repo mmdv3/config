@@ -1,0 +1,16 @@
+#!/bin/bash
+#  commit all changes and push only if there is something to be pushed
+current_directory=$(pwd)		#  remember current directory to get back there at the end	
+repos="/.files/repository"
+remote="origin"
+### script ##################################
+for repo in $repos/*
+do
+	cd $repo
+		echo "-- pulling $repo --"
+		git pull $remote master	
+done
+cd $current_directory
+exit 0
+					
+	

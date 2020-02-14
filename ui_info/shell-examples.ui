@@ -1,0 +1,42 @@
+#############################################
+# man -k <keyword> and apropos <keyword> seem to give similiar output
+# compare outputs of those two for keyword 'sort'
+#
+# | && apropos sort > /tmp/ex1
+#       apropos sort > /tmp/ex2
+#    diff /tmp/ex1
+#         /tmp/ex2
+#shell:
+#	apropos sort > /tmp/ex1 && man -k sort > /tmp/ex2 | diff /tmp/ex1 /tmp/ex2
+
+# shell variables work like C variables
+# $PATH stores directories used to look for scripts like <path1>:<path2>:....:<pathLast>
+# prepend/append $PATH value effectively adding new search directory for shell scripts:
+# $PATH=<pathNew>:$PATH or $PATH=$PATH:<pathNew> 
+
+# append output to file:
+# <command> >> <file>
+
+# redirect stdout to file f (p.e. stderr still is directed to shell)
+# ex. 'ls ~ /fffffffff > /tmp/f
+
+# redirect stdout to file f and stderr to e
+# ex. 'ls ~ /ffffffff > /tmp/f 2> /tmp/e'
+
+# redirect stdout and stderr to f
+# ex. 'ls ~ /fffffff > /tmp/f 2>&1'
+
+run a command in background, get the prompt back
+  ex. 'gunzip file.gz &'
+
+
+|Compressed Archives
+	there are shortcuts for 
+		gunzip file.tar.gz
+		tar xvf file.tar
+	eg.
+		zcat file.tar.gz | tar xvf -
+	or
+		tar ztvf file.tar.gz
+
+!! .tgz is the same as .tar.gz

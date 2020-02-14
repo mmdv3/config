@@ -1,0 +1,28 @@
+
+general system tree hierarchy
+
+/
+	bin/ - contains executables
+	dev/ - contains device(??) files
+	etc/ - core system configuration directory
+!		X11/ - contains graphics card and window system configuration
+	usr/
+		bin/
+		man/
+		lib/
+		local/
+		sbin/
+		share/
+	home/
+	lib/ - holds library files containg code that executables can use.
+					Should contain only shared libraries.
+					(usr/lib contains both static and shared libraries as well as some other files)
+	proc/
+	mnt/
+	sbin/
+	tmp/
+	var/
+		log/
+		tmp/	
+	dev/ - device files
+			 - first permission bit b,c,p,s : block, character, pipe, socket

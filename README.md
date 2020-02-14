@@ -1,2 +1,2 @@
 # config
-Configuration files and Arch Linux install scripts
+Configuration files, Arch Linux install scripts, my scripts

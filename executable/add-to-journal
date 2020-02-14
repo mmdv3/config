@@ -1,0 +1,21 @@
+#!/bin/bash
+#	let user enter journal entry, then prepend with date.
+#	Append it to $OTHER/user-journal 
+
+temp_location=/tmp/
+prefix=temp-scr-journal
+suffix=$(date +%s) 		# for 'unique' filename
+file=$temp_location$prefix.$suffix
+journal=$OTHER_PATH/user-journal.ui
+### script ##################################
+touch $file			# make temporary file 
+vim $file 			# get input from user 
+				# print with date of entry
+#echo -e "\t$(date)" >> $journal	
+echo -n -e "\t$(date +%_a) $(date +%_d) $(date +%_b) wk:$(date +%_W)" >> $journal
+echo " $(date +%_Y) $(date +%_T) $(date +%_Z)" >> $journal
+cat $file >> $journal		# write entry to journal
+rm $file			# remove temporary file
+
+exit
+

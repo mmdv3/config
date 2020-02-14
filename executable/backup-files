@@ -1,0 +1,11 @@
+#!/bin/bash
+current_directory=$(pwd)		#  remember current directory to get back there at the end	
+music_lib="~/Files/data/music"
+### script ##################################
+cd $music_lib
+rm */*.bak
+cp --update -R ~/Files/data/music/* ~/Files/data/backup-music
+cd $current_directory
+exit 0
+					
+	

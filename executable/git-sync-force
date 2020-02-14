@@ -1,0 +1,29 @@
+#!/bin/bash
+#  commit all changes and push only if there is something to be pushed
+current_directory=$(pwd)		#  remember current directory to get back there at the end	
+repos="/.files/repository"
+remote="origin"
+commit_msg=$(date +%F)
+output_file="/tmp/git-sync-$(date +%s)"
+no_change_msg="nothing to commit"
+### script ##################################
+touch $output_file
+for repo in $repos/*
+do
+	cd $repo
+	git add .
+	git commit -m $commit_msg > $output_file
+	commited=$(grep "$no_change_msg" $output_file)
+#	if [ -z "$commited"  ]
+#	then			
+		echo "-- pushing $repo --"
+		git push $remote master	
+#	else				#  if no changes were made, there is no reason to push anything	
+#		echo "-- no changes in $repo --"
+#	fi
+done
+rm $output_file
+cd $current_directory
+exit 0
+					
+	

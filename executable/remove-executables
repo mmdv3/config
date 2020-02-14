@@ -1,0 +1,11 @@
+#!/bin/bash
+for file in ./*
+do
+	if [[ -x $file && -f $file ]] # regular file + executable
+	then
+		echo "removed $file"
+		rm $file
+	else
+		:
+	fi
+done

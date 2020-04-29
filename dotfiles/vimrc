@@ -15,7 +15,7 @@ set relativenumber		"line numbers
 set nocursorline		    "underline current line
 """ colors """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 color elflord               "color theme
-set cc=80                   "color column at line 80
+set cc=80,160,240           "color column at line 80
 hi ColorColumn ctermbg=8    "grey color column
 """ tabs """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set shiftwidth=2            "number of spaces used for (auto)indent step

@@ -1,5 +1,8 @@
 vim: set tabstop=2
 
+| HTTP error 404 : forbidden with youtube-dl
+	remove cache directory with
+	youtube-dl --rm-cache-dir
 |keymaps
   /usr/share/kbd/keymaps - location
 	/usr/share/kbd/consolefonts - directory with tty fonts, *.psfu{.gz} have builtin unicode translation map
@@ -46,6 +49,12 @@ vim: set tabstop=2
   sudo locale - display current values of language variables
 |visudo - use it to edit /etc/sudoers, this comand checks 
 					for file syntax error after you save the file
+|cmus - ambiguous config options
+	title - window name in window manager
+	format_current - bottom line with info about currently played track
+	format_playlist - actual display in view '2'
+|fcitx - troubleshooting
+	fcitx-diagnose - lots of useful info	
  ########################### random shit #################################
 |displays soundcards:
  cat /proc/asound/cards

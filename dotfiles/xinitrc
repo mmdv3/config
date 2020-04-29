@@ -6,7 +6,7 @@ xrdb -merge ~/xlocal
 #  japanese input
 export GTK_IM_MODULE='fcitx'
 export QT_IM_MODULE='fcitx'
-uim-xim &
+#uim-xim &
 export XMODIFIERS='@im=fcitx'
 #  default
 exec fcitx &

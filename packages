@@ -1,60 +1,65 @@
-vi					#essential: Star Trek
-vim 				#essential: text editor 
-zsh					#essential: shell
-dialog 				#essential: wifi-menu dep
-wpa_supplicant		#essential: wifi-menu dep 
-netctl				#essential: wifi-menu dep
-dhcpcd				#essential: DHCP client
-grub				#essential: boot
-efibootmgr			#essential: boot
-mkinitcpio			#essential:
-linux				#essential:
-linux-firmware		#essential:
-lvm2				#essential:
-man-db				#essential: man pages
-man-pages			#essential: man pages
-texinfo				#essential: man pages
-git					#essential: version control system
-dosfstools 			#regular: 
-cdrtools			#regular: mkisofs
-os-prober 			#regular: detecting other operating systems 
-mtools				#regular: 
-linux-headers		#regular:
-xf86-video-nouveau	#regular:
-libxt				#reqular: X11 toolkit intrinsics library
-libxfixes			#regular:
-lxinput				#reqular:
-mesa				#regular:
-lib32-mesa			#regular:
-xdotool				#reqular:
-xorg 				#regular:
-xorg-xinit			#regular:
-xorg-server			#regular:
-dmenu				#regular:
-rxvt-unicode		#regular: terminal
-urxvt-perls 		#regular: perl add-ons for terminal
-qutebrowser			#regular: browser
-w3m					#regular: text-based browser
-pulseaudio			#regular: audio
-pamixer				#regular: audio 
-pavucontrol			#regular: audio GUI
-zathura				#regular: pdf reader
-zathura-pdf-mupdf	#regular:
-texlive-most 		#regular:
-fontconfig			#regular: 
-ttf-liberation		#regular: default terminal font
-otf-ipafont			#regular: font with nice kanji
-fcitx-mozc			#regular: jpn
-cmake				#regular:
-qt5					#regular:
-exfat-utils			#regular:
-vlc					#regular: media player
-cmus				#regular: music player
-youtube-dl			#regular:
-xdotool				#regular: topbar dependency
-ntp					#regular: date/time
+vi						#essential: Star Trek
+vim 					#essential: text editor 
+zsh						#essential: shell
+dialog 					#essential: wifi-menu dep
+wpa_supplicant			#essential: wifi-menu dep 
+netctl					#essential: wifi-menu dep
+dhcpcd					#essential: DHCP client
+grub					#essential: boot
+efibootmgr				#essential: boot
+mkinitcpio				#essential:
+linux					#essential: kernel
+linux-firmware			#essential: firmware
+lvm2					#essential: lvm utils
+man-db					#essential: man pages
+man-pages				#essential: man pages
+texinfo					#essential: man pages
+git						#essential: version control system
+wireless_tools			#regular: iwconfig and stuff
+dosfstools 				#regular: 
+cdrtools				#regular: mkisofs
+os-prober 				#regular: detecting other operating systems 
+mtools					#regular: 
+linux-headers			#regular:
+xf86-video-nouveau		#regular:
+libxt					#reqular: X11 toolkit intrinsics library
+libx11					#regular: dwm dependency
+libxfixes				#regular:
+lxinput					#reqular:
+mesa					#regular:
+xdotool					#reqular:
+xorg 					#regular:
+xorg-xinit				#regular:
+xorg-server				#regular:
+dmenu					#regular:
+nnn                     #regular: file manager
+rxvt-unicode			#regular: terminal
+urxvt-perls 			#regular: perl add-ons for terminal
+qutebrowser				#regular: browser
+w3m						#regular: text-based browser
+pulseaudio				#regular: audio
+pamixer					#regular: audio 
+pavucontrol				#regular: audio GUI
+zathura					#regular: pdf reader
+zathura-pdf-mupdf		#regular:
+texlive-most 			#regular:
+fontconfig				#regular: 
+ttf-liberation			#regular: default terminal font
+otf-ipafont				#regular: font with nice kanji
+fcitx-mozc				#regular: jpn
+fcitx-configtool		#regular:
+fcitx-qt5				#reqular: qt5 module
+cmake					#regular:
+qt5						#regular:
+exfat-utils				#regular:
+vlc						#regular: media player
+cmus					#regular: music player
+kid3-qt                 #regular: tag editor
+ffmpeg                  #regular: music
+youtube-dl				#regular:
+xdotool					#regular: topbar dependency
 urxvt-resize-font-git	#AUR:
-xbanish				#fork:
-config				#repo:
-dwm					#repo:
+xbanish					#fork:
+config					#repo:
+dwm						#repo:
 

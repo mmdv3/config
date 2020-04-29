@@ -82,9 +82,9 @@
 ! ##
    URxvt.keysym.M-Control-v: eval:paste_clipboard
    URxvt.keysym.M-Control-c: eval:selection_to_clipboard
-! resize
-!   URxvt.keysym.C-Down:  resize-font:smaller
-!   URxvt.keysym.C-Up:  resize-font:bigger
+! resize |works?|
+   URxvt.keysym.C-Down:  resize-font:smaller 
+   URxvt.keysym.C-Up:  resize-font:bigger
    URxvt.iso12755: false
    URxvt.iso14755_52: false
 !
@@ -99,4 +99,6 @@
 
 !symbols (echo -e)
 !\00d3
+a
+a
 

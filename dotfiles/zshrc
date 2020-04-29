@@ -85,15 +85,19 @@ alias ls='ls --color=auto'
 alias la='ls -al'
 alias ll='ls -l'
 alias lc='ls -C'
-alias aj='add-to-journal'
-alias dj='dis-journal'
+alias lcg='ls -C| grep'
+alias ui="vim $config_path/ui_info"
+alias bat='cat /sys/class/power_supply/BAT*/capacity'
+alias gpp='g++ -std=c++17 -Wall -Wextra -o program.out'
+alias asdf="/.files/data/university/contests"
+alias cleantexshit="rm *.{log,aux}"
+
 alias ts='touchs'
 alias mg='contest-compile'
 alias mge='remove-executables; contest-compile'
 alias ec='remove-executables'
 alias me='urxvt -fade 50 &'
 alias cs='cp /home/archie/Notes/Contest/template-contest.cpp'
-alias bat='cat /sys/class/power_supply/BAT*/capacity'
 alias dis-info='cat $other_path/useful-info.ui'
 alias new-info='vim $other_path/useful-info.ui'
 alias les-info='less $other_path/useful-info.ui'
@@ -105,7 +109,7 @@ alias new-examples='vim $other_path/shell-examples.ui'
 alias les-examples='less $other_path/shell-examples.ui'
 #############################################
 if [[ $(tty) =~ '/dev/tty1' ]]
-then startx
+then $(startx -- :1)
 fi
 #############################################
 if [[ -f ~/reminder ]]
@@ -114,6 +118,5 @@ fi
 #############################################
 function chpwd() {ls -C} #  run every time pwd changes
 #############################################
-export JUPYTERLAB_DIR=$HOME/.local/share/jupyter/lab
 
 

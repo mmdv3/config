@@ -1,7 +1,5 @@
 Name			| Reference
 infokey 		| ~/.infokey
-config/i3		| ~/.config/i3
-config/i3status		| ~/.config/i3status
 vim/filetype.vim	| ~/.vim/filetype.vim
 vim/ftplugin		| ~/.vim/ftplugin
 vimrc			| ~/.vimrc

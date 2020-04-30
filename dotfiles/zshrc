@@ -1,4 +1,4 @@
-source ~/zshlocal #  *_path, *_paths
+source ~/.zshlocal #  *_path, *_paths
 YELLOW='\033[1;33m' #  user color
 RED='\033[0;31m' #  root color
 NC='\033[0m' #  no color

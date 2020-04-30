@@ -1,6 +1,6 @@
 "set statusline=%y
 """ general """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set term=rxvt-unicode-256color
+set term=st-256color
 set encoding=utf-8 "changes output encoding shown in the terminal
 set fileencoding=utf-8 
 set t_Co=256 "number of colors in terminal

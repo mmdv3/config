@@ -1,4 +1,10 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =2
-let g:netrw_dirhist_1='/home/archie/Files/Git/.git'
-let g:netrw_dirhist_2='/home/archie/.config/i3'
+let g:netrw_dirhistcnt =8
+let g:netrw_dirhist_8='/.files/fork/st'
+let g:netrw_dirhist_7='/.files/fork'
+let g:netrw_dirhist_6='/.files'
+let g:netrw_dirhist_5='/.files/config'
+let g:netrw_dirhist_4='/.files'
+let g:netrw_dirhist_3='/.files/fork/st'
+let g:netrw_dirhist_2='/.files/fork'
+let g:netrw_dirhist_1='/.files/fork/st'

@@ -21,20 +21,10 @@ cdrtools				#regular: mkisofs
 os-prober 				#regular: detecting other operating systems 
 mtools					#regular: 
 linux-headers			#regular:
-#xf86-video-nouveau		#regular:
-##libxt					#reqular: X11 toolkit intrinsics library
-##libx11					#regular: dwm dependency
-##libxfixes				#regular:
-##lxinput					#reqular:
-##just a dependency#mesa					#regular:
-#xdotool					#reqular: must be do something with power displaying
-#xorg 					#regular:
 xorg-xinit				#regular:
 xorg-server				#regular: actual Xorg server
 dmenu					#regular:
 nnn                     #regular: file manager
-#rxvt-unicode			#regular: terminal
-#urxvt-perls 			#regular: perl add-ons for terminal
 qutebrowser				#regular: browser
 w3m						#regular: text-based browser
 pulseaudio				#regular: audio
@@ -60,8 +50,6 @@ cups                    #regular: printer
 hplip					#regular: printer
 system-config-printer   #regular: printer
 youtube-dl				#regular:
-#do something instead of that#xdotool					#regular: topbar dependency
-#urxvt-resize-font-git	#AUR:
 xbanish					#fork:
 config					#repo:
 dwm						#repo:

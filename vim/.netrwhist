@@ -1,5 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =8
+let g:netrw_dirhistcnt =9
+let g:netrw_dirhist_9='/.files/Fork/dwm'
 let g:netrw_dirhist_8='/.files/fork/st'
 let g:netrw_dirhist_7='/.files/fork'
 let g:netrw_dirhist_6='/.files'

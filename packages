@@ -15,26 +15,27 @@ man-db					#essential: man pages
 man-pages				#essential: man pages
 texinfo					#essential: man pages
 git						#essential: version control system
-wireless_tools			#regular: iwconfig and stuff
+wireless_tools			#regular: 'iwconfig and stuff
 dosfstools 				#regular: 
-cdrtools				#regular: mkisofs
+cdrtools				#regular: 'mkisofs
 os-prober 				#regular: detecting other operating systems 
 mtools					#regular: 
 linux-headers			#regular:
-xorg-xinit				#regular:
+xorg-xinit				#regular: 'startx
 xorg-server				#regular: actual Xorg server
 dmenu					#regular:
 nnn                     #regular: file manager
 qutebrowser				#regular: browser
 w3m						#regular: text-based browser
 pulseaudio				#regular: audio
-pamixer					#regular: audio 
-pavucontrol				#regular: audio GUI
+pamixer					#regular: audio cli
+pavucontrol				#regular: audio gui 
 zathura					#regular: pdf reader
 zathura-pdf-mupdf		#regular:
+mupdf                   #regular: document/image viewer
 texlive-most 			#regular:
 fontconfig				#regular: 
-ttf-liberation			#regular: default terminal font
+ttf-liberation			#regular: default font
 otf-ipafont				#regular: font with nice kanji
 fcitx-mozc				#regular: jpn
 fcitx-configtool		#regular:
@@ -50,6 +51,10 @@ cups                    #regular: printer
 hplip					#regular: printer
 system-config-printer   #regular: printer
 youtube-dl				#regular:
+transmission-qt         #regular: torrent client
+wget                    #regular:
+slock					#fork: screen lock
+slstatus                #fork: status bar
 xbanish					#fork:
 config					#repo:
 dwm						#repo:

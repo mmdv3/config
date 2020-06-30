@@ -49,6 +49,8 @@ bindkey "^u" history-beginning-search-backward
 bindkey "^h" history-beginning-search-forward
 bindkey -a "^u" history-search-backward #  vi mode keybindings
 bindkey -a "^h" history-search-forward
+# static named directories
+hash -d ff=/.files
 ### prompt ##################################
 # leftside prompt
 PS1="%F{yellow}家%f"
@@ -60,7 +62,7 @@ zle-line-init zle-keymap-select () #don't separete them with '\n'
 {
 #  red = regular mode	
 #  light blue = vi mode
-	if [[ "$TERM" == 'rxvt-unicode-256color' ]]
+	if [[ "$TERM" == 'st-256color' ]]
 	then
 		case $KEYMAP in	
 			vicmd|viins)
@@ -84,12 +86,13 @@ alias view='vim -R'
 alias ls='ls --color=auto'
 alias la='ls -al'
 alias ll='ls -l'
-alias lc='ls -C'
+alias lc='ls -CX'
 alias lcg='ls -C| grep'
 alias ui="vim $config_path/ui_info"
 alias bat='cat /sys/class/power_supply/BAT*/capacity'
 alias gpp='g++ -std=c++17 -Wall -Wextra -o program.out'
-alias asdf="/.files/data/university/contests"
+alias asdf="/.files/University/contests"
+alias files="/.files"
 alias cleantexshit="rm *.{log,aux}"
 
 alias ts='touchs'
@@ -110,10 +113,6 @@ alias les-examples='less $other_path/shell-examples.ui'
 #############################################
 if [[ $(tty) =~ '/dev/tty1' ]]
 then $(startx -- :1)
-fi
-#############################################
-if [[ -f ~/reminder ]]
-then cat ~/reminder ; rm ~/reminder
 fi
 #############################################
 function chpwd() {ls -C} #  run every time pwd changes

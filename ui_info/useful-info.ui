@@ -125,3 +125,4 @@ xrandr --output HDMI-0 --left-of LVDS --auto
 |rfkill - check if wireless card is not blocked / enable it
 |fontconfig - documented in fonts-conf(5)
 |pacman -Qdtq - find all packages that do not depend on other packages
+|xset -dpms s off - turn off screensaver

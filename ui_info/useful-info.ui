@@ -126,3 +126,13 @@ xrandr --output HDMI-0 --left-of LVDS --auto
 |fontconfig - documented in fonts-conf(5)
 |pacman -Qdtq - find all packages that do not depend on other packages
 |xset -dpms s off - turn off screensaver
+| KDE
+how to kill KDE?
+sudo systemctl set-default multi-user.target
+sudo systemctl set-default gtaphical.target
+loginctl terminate-user dymowski - faktycznie wylogowuje i zabija KDE. Dobry kandydat na skrót klawiszowy
+| find - most OP command line tool ever
+	find . -print | grep kupa
+	find ~/Work/perftests/logs -type f -name "*.xlsx" -print0| xargs -0 cp --target-directory=. 
+	(copy excel files from perftests/logs)
+

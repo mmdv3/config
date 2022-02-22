@@ -40,3 +40,5 @@ run a command in background, get the prompt back
 		tar ztvf file.tar.gz
 
 !! .tgz is the same as .tar.gz
+
+echo $XDG_CURRENT_DESKTOP - może pomaga wyśledzić, jak włącza się twój desktop?

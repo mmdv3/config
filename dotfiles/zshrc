@@ -82,7 +82,7 @@ zle -N zle-line-init 			#use zle-line-init
 # my scripts
 export PATH=$exec_paths:$PATH
 ### aliases #################################
-alias view='vim -R'
+alias view='vim -R -c ":set norelativenumber"'
 alias ls='ls --color=auto'
 alias la='ls -al'
 alias ll='ls -l'

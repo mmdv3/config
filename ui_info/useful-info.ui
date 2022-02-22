@@ -9,6 +9,8 @@ vim: set tabstop=2
   loadkeys
   xev
   /etc/inputrc #???
+|keysym of modifier
+  xmodmap
 |unicode chars
   echo -e '\u<code>'
    ex. echo -e '\u00d3' 
@@ -80,6 +82,9 @@ vim: set tabstop=2
 |chsh, passwd
 |man -k <keyword>
   produces less random shit than 'apropos <keyword>'
+|qpdf
+  qpdf infile.pdf --pages . 1-5 -- outfile.pdf
+  qpdf infile.pdf --pages . 1-4:odd -- outfile.pdf
 |tr
 |ps
   list processes
@@ -125,4 +130,7 @@ xrandr --output HDMI-0 --left-of LVDS --auto
 |rfkill - check if wireless card is not blocked / enable it
 |fontconfig - documented in fonts-conf(5)
 |pacman -Qdtq - find all packages that do not depend on other packages
+        -Ss <package_name> - search for package in repositories
 |xset -dpms s off - turn off screensaver
+|deepin-screenshot - screenshot
+|timedatectl set-ntp true -- time sync over network

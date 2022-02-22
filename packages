@@ -8,7 +8,8 @@ dhcpcd					#essential: DHCP client
 grub					#essential: boot
 efibootmgr				#essential: boot
 mkinitcpio				#essential:
-linux					#essential: kernel
+linux-lts               #essential: kernel
+linux-lts-headers       #essential:
 linux-firmware			#essential: firmware
 lvm2					#essential: lvm utils
 man-db					#essential: man pages
@@ -20,7 +21,6 @@ dosfstools 				#regular:
 cdrtools				#regular: 'mkisofs
 os-prober 				#regular: detecting other operating systems 
 mtools					#regular: 
-linux-headers			#regular:
 xorg-xinit				#regular: 'startx
 xorg-server				#regular: actual Xorg server
 dmenu					#regular:
@@ -32,7 +32,7 @@ pamixer					#regular: audio cli
 pavucontrol				#regular: audio gui 
 zathura					#regular: pdf reader
 zathura-pdf-mupdf		#regular:
-mupdf                   #regular: document/image viewer
+feh                     #regular: image viewer
 texlive-most 			#regular:
 fontconfig				#regular: 
 ttf-liberation			#regular: default font
@@ -53,6 +53,8 @@ system-config-printer   #regular: printer
 youtube-dl				#regular:
 transmission-qt         #regular: torrent client
 wget                    #regular:
+sxhkd                   #regular: X hotkey deamon
+qpdf                    #regular: pdf manipulation
 slock					#fork: screen lock
 slstatus                #fork: status bar
 xbanish					#fork:

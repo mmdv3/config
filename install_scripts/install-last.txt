@@ -1,7 +1,12 @@
 set up github with
-	git config --global user.name "your name"
-	git config --global user.email "your email"
+  git config --global user.name "your name"
+  git config --global user.email "your email"
 set variables in ~/zshlocal
 set terminal font in ~/xlocal
 run fcitx-configtool and add mozc input method
 copy ips from "other" to /etc/hosts
+
+enable click on tap
+  copy 70-synaptics.conf to /etc/x11/xorg.conf.d
+
+set your search engine to searx

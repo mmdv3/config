@@ -1,0 +1,20 @@
+super + p
+  dmenu_run 
+super + t
+  $TERMINAL
+super + u
+  $TERMINAL -e tmux
+super +  s
+  deepin-screenshot
+super + o
+  $BROWSER
+super + n 
+  $TERMINAL -e nnn
+super + m
+  $TERMINAL -e cmus
+super + v
+  pavucontrol
+super + k
+  $TERMINAL -e 'kill $(ps -e | grep Discord | awk '{print $1;}')'
+super + a
+  alacritty

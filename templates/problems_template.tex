@@ -1,0 +1,144 @@
+% !!! żeby rozwiązania kompilowały się proszę skopiować sekcję 'commands' !!!
+
+% DOCUMENTCLASS  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\documentclass{article}
+\documentclass[
+leqno,           % equations numbers on the left, comment to change to right
+10pt,            % size of font, options: 10pt, 11pt, 12pt
+%draft,          % draft version, show overfullboxes
+a4paper          % paper size, options: letterpaper, a4paper, a5paper
+]{amsart}
+
+%%%%  PACKAGES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\usepackage[notcite,notref]{showkeys}                                  % comment to hide labels
+%\usepackage[colorlinks,citecolor=blue,urlcolor=blue]{hyperref}         % active, color links
+%\usepackage{courier}                                                    % oter: courier (std), fourier (like), chancery (gothic), helvet (std), concrete
+
+% tools
+\usepackage{amssymb, amsmath, amsfonts, amsthm}                         % ams things
+%\usepackage{mathtools, cite, enumerate, rotating, framed, lipsum}      % other packages 1
+%\usepackage{bbm, blindtext}                                            % other packages 2
+%\usepackage[dvipsnames]{xcolor}                                        % more colors
+\usepackage{enumitem} 	% nosep
+\usepackage{changepage} % adjustwidth
+%\usepackage[document]{ragged2e}
+% language, encoding
+\usepackage[polish, english]{babel}                                     % multilanguage, use: \selectlanguage
+\usepackage[T1]{fontenc}                                                % encoding
+\usepackage[utf8]{inputenc}                                             % encoding
+\usepackage{titlesec}                                                   % \titleformat
+%\usepackage[final]{graphicx}                                           % for images
+\usepackage{geometry}                                                   % page geometry
+% geometry
+\geometry{
+	paper=a4paper,
+	top=2.5cm, 
+	bottom=3cm,
+	left=2.5cm,
+	right=2.5cm,
+	headheight=14pt,
+	footskip=1.5cm,
+	headsep=1.2cm,
+}
+
+
+%%%%%  MARGINS AND PAGE GEOMETRY %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%\pagestyle{plain}                                                              % plain (no footer and header), empty (no footer and header, no page numbers)
+%\addtolength{\oddsidemargin}{-1.5cm} \addtolength{\evensidemargin}{-1.5cm}      % margins for file
+%%\addtolength{\oddsidemargin}{-1cm} \addtolength{\evensidemargin}{-2cm}         % margins for printing
+%\addtolength{\textwidth}{3cm}                                                   % wider text
+%\addtolength{\textheight}{3,5cm} \addtolength{\topmargin}{-2cm}               % longer text
+%\setlength{\parskip}{1.0ex}                                                     % space between paragraphs
+%\linespread{1.1}                                                                % a bit more loose text
+
+%%% page numbering
+\pagenumbering{gobble} % do not print page numbers
+
+% title format
+\titleformat*{\subsection}{\normalfont\bfseries}
+\titleformat*{\section}{\large\bfseries}
+
+%%%%  EQUATION NUMBERING
+\renewcommand{\theequation}{\arabic{equation}}           % numbering, 1 level
+%\numberwithin{equation}{section}                        % numbering, 2 levels
+%\numberwithin{equation}{subsection}                     % numbering, 3 levels
+
+%%%%  ENUMERATE STYLE
+\renewcommand{\labelenumi}{\bf \arabic{enumi}. }         % enumerate style change
+
+% commands %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\rel}{\mathbb{R}}
+\newcommand{\cte}{\mathbb{C}}
+\newcommand{\nat}{\mathbb{N}}
+\newcommand{\saf}{\mathcal{F}}
+\newcommand{\bor}{\text{Bor} \left( \mathbb{R} \right)}
+\newcommand{\Om}{\Omega}
+\newcommand{\om}{\omega}
+\newcommand{\al}{\alpha}
+\newcommand{\be}{\beta}
+\newcommand{\ga}{\gamma}
+\newcommand{\de}{\delta}
+\newcommand{\eps}{\epsilon}
+\newcommand{\sig}{\sigma}
+%%% semantics
+\newcommand{\prob}     { \subsection*{\textbf{treść}} }
+\newcommand{\solv}     { \subsection*{\textbf{rozwiązanie}} }
+%\def\en#1              { \section*{\textbf{Zadanie #1}} }
+\newcommand{\en}{\item}
+% good looking text in equations
+\newcommand{\op}{\operatorname}
+% parentheses
+\newcommand{\lbr}{\left[}
+\newcommand{\lcl}{\lceil}
+\newcommand{\lp}{\left(}
+\newcommand{\lpr}{\left\{}
+\newcommand{\lfl}{\lfloor}
+
+\newcommand{\rbr}{\right]}
+\newcommand{\rcl}{\rceil}
+\newcommand{\rp}{\right)}
+\newcommand{\rpr}{\right\}}
+\newcommand{\rfl}{\rfloor}
+% arrows
+\newcommand{\la}{\leftarrow}
+\newcommand{\ra}{\rightarrow}
+\newcommand{\rlim}{\rightarrow \infty}
+% fractions
+\newcommand{\fr}{\frac}
+\def\frp#1#2{\left( \frac{#1}{#2} \right)}
+\newcommand{\inv}{\frac{1}}
+% exp
+\newcommand{\expp}{e^}
+% binomial
+\newcommand{\bi}{\binom}
+% probability
+\def\pr#1{\mathbb{P} \left[ #1 \right]}
+% floor
+\def\fl#1{\lfloor #1 \rfloor}
+\def\flr#1#2{\lfloor \frac{#1}{#2} \rfloor}
+\def\fcl#1#2{\lceil \frac{#1}{#2} \rceil}
+% complex numbers
+\def\re#1{\operatorname{Re}(#1)}
+\def\im#1{\operatorname{Im}(#1)}
+
+\def\opn#1{\operatorname{#1}}
+%%% title %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{
+	cool title
+	}
+\author{
+	\large{Michał Dymowski}
+	}
+\date{}
+
+%%% document %%%%%%%%%%%%%%
+\begin{document}
+\selectlanguage{polish}
+
+\begin{large}\begin{center}
+   {\bf Problems}
+\end{center}\end{large}
+
+	\maketitle
+
+\end{document}

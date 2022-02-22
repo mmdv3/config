@@ -81,5 +81,3 @@ sudo pacman -Syu $regular_packages
 #### exit#####################################
 #cd $start_dir
 #exit 0
-
-

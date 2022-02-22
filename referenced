@@ -1,10 +1,11 @@
-Name			| Reference
-infokey 		| ~/.infokey
+Name			    | Reference
+infokey 		    | ~/.infokey
 vim/filetype.vim	| ~/.vim/filetype.vim
 vim/ftplugin		| ~/.vim/ftplugin
-vimrc			| ~/.vimrc
-xinitrc			| ~/.xinitrc
-Xresources		| ~/.Xresources
+vimrc			    | ~/.vimrc
+xinitrc			    | ~/.xinitrc
+Xresources		    | ~/.Xresources
 zathura/zathurarc	| ~/.config/zathura/zathurarc
-zshrc			| ~/.zshrc
+zshrc			    | ~/.zshrc
+sxhkdrc             | ~/.config/sxhkd/sxhkdrc
 
